@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:float="http://schemas.android.com/apk/res-auto"
+    xmlns:sbview="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <include
+        android:id="@+id/top_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/top_panel" />
+
+    <RelativeLayout
+        android:id="@+id/body_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/top_view"
+        android:paddingLeft="@dimen/view_size_15"
+        android:paddingRight="@dimen/view_size_15" >
+
+        <com.sbw.lookon.custom.SbTextView
+            android:id="@+id/signup_suggest"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/view_size_45"
+            android:gravity="center"
+            android:text="Enter Your Details"
+            android:textColor="@color/color_app_text"
+            android:textSize="@dimen/txt_size_30"
+            sbview:typeface="Roboto-Bold.ttf" />
+
+        <LinearLayout
+            android:id="@+id/edit_panel"
+            android:layout_below="@+id/signup_suggest"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" 
+            android:layout_marginTop="@dimen/view_size_25"
+            android:orientation="vertical">
+
+            <com.sbw.lookon.floatlabelededittext.SbFloatLabeledEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="First Name" />
+            </com.sbw.lookon.floatlabelededittext.SbFloatLabeledEditText>
+            <com.sbw.lookon.floatlabelededittext.SbFloatLabeledEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Last Name" />
+            </com.sbw.lookon.floatlabelededittext.SbFloatLabeledEditText>
+            <com.sbw.lookon.floatlabelededittext.SbFloatLabeledEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Mobile Number" />
+            </com.sbw.lookon.floatlabelededittext.SbFloatLabeledEditText>
+            
+            <com.sbw.lookon.custom.SbTextView 
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="@dimen/txt_size_12"
+                android:text="(an OTP will sent to your number to verify your identity)"
+                sbview:typeface="Roboto-Light.ttf"/>
+        </LinearLayout>
+        
+        
+        
+        <com.sbw.lookon.custom.SbTextView
+            android:id="@+id/bt_continue"
+            android:layout_below="@+id/edit_panel"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:padding="@dimen/view_size_20"
+            android:layout_marginTop="@dimen/view_size_25"
+            android:layout_centerHorizontal="true"
+            android:text="Continue"
+            android:textSize="@dimen/txt_size_20"
+            android:textColor="@android:color/white"
+            android:background="@drawable/button_bg"
+            sbview:typeface="Roboto-Bold.ttf"/>
+        
+        
+        <com.sbw.lookon.custom.SbTextView
+            android:id="@+id/view"
+            android:layout_below="@+id/bt_continue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/view_size_45"
+            android:gravity="center"
+            android:text="Welcome to FLEXICHAT"
+            android:textColor="@color/color_app_text"
+            android:textSize="@dimen/txt_size_25"
+            sbview:typeface="Roboto-Bold.ttf" />
+        
+        <com.sbw.lookon.custom.SbTextView
+            android:id="@+id/view_i"
+            android:layout_below="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/view_size_5"
+            android:gravity="center"
+            android:text="&#169; 2015 OZONEAD SERVICES. All rights reserved."
+            android:textColor="@android:color/darker_gray"
+            android:textSize="@dimen/txt_size_18"
+            sbview:typeface="Roboto-Bold.ttf" />
+        
+        
+    </RelativeLayout>
+
+</RelativeLayout>

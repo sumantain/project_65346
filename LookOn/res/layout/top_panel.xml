@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/color_app_header"
+     android:padding="@dimen/view_size_5">
+    
+    <ImageView 
+        android:id="@+id/back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_back_arrow"/>
+    
+    <com.sbw.lookon.custom.SbTextView 
+        android:id="@+id/header_text"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_centerInParent="true"
+        android:hint="@string/app_name"
+        android:textSize="@dimen/txt_size_18"
+        android:textColor="@android:color/white"
+        android:textColorHint="@android:color/background_light"/>
+
+</RelativeLayout>
