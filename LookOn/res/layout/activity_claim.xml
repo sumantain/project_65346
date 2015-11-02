@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_business" >
+
+    <include
+        android:id="@+id/top_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/top_panel" />
+
+    <LinearLayout
+        android:id="@+id/bottom_panel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/cliam_your_business_bottom_panel"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="@dimen/view_size_5" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/not_in_list"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/txt_size_12" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/addyour_business_now"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/txt_size_10" />
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/list_business"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/bottom_panel"
+        android:layout_below="@id/top_view"
+        android:padding="@dimen/view_size_5" />
+
+</RelativeLayout>

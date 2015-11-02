@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_vertical"
+    android:padding="@dimen/view_size_5" >
+
+    <ImageView
+        android:id="@+id/img_business_logo"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:padding="@dimen/view_size_5"
+        android:src="@drawable/icons" />
+
+    <LinearLayout
+        android:id="@+id/ll_bodypanel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/img_business_logo"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/txt_business_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Travel Company"
+            android:textSize="@dimen/txt_size_15" />
+
+        <TextView
+            android:id="@+id/txt_business_body"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="2"
+            android:text="@string/demo_text"
+            android:textSize="@dimen/txt_size_12" />
+
+        <TextView
+            android:id="@+id/txt_business_distance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:padding="@dimen/view_size_5"
+            android:text="0.35Km"
+            android:textColor="@color/color_app_header"
+            android:textSize="@dimen/txt_size_10" />
+    </LinearLayout>
+
+</RelativeLayout>
