@@ -57,6 +57,11 @@
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateAlwaysHidden|adjustResize" >
         </activity>
+        <activity
+            android:name="com.sbw.lookon.ui.ActivityChat"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize" >
+        </activity>
 
         <!-- Goolge API Key -->
         <meta-data
