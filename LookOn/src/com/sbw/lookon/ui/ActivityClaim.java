@@ -6,11 +6,14 @@ import com.sbw.lookon.custom.SbTextView;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.AdapterView.OnItemClickListener;
 
 public class ActivityClaim extends Activity implements OnClickListener{
 
@@ -36,6 +39,15 @@ public class ActivityClaim extends Activity implements OnClickListener{
 		list_Business = (ListView) findViewById(R.id.list_business);
 		setHeader();
 		populateListItem();
+		list_Business.setOnItemClickListener(new OnItemClickListener() {
+
+			@Override
+			public void onItemClick(AdapterView<?> parent, View view,
+					int position, long id) {
+				startActivity(new Intent(ActivityClaim.this, ActivityChat.class));
+				overridePendingTransition(0, 0);
+			}
+		});
 	}
 	
 	@Override

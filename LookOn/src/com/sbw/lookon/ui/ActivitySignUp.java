@@ -14,7 +14,6 @@ import com.sbw.lookon.custom.SbTextView;
 
 public class ActivitySignUp extends Activity implements OnClickListener {
 
-	private ImageView menu;
 	private SbTextView header_text;
 	private SbTextView bt_continue;
 
@@ -28,8 +27,7 @@ public class ActivitySignUp extends Activity implements OnClickListener {
 
 	private void initialize() {
 
-		menu = (ImageView) findViewById(R.id.menu);
-		menu.setVisibility(View.VISIBLE);
+		
 		header_text = (SbTextView) findViewById(R.id.header_text);
 		bt_continue = (SbTextView) findViewById(R.id.bt_continue);
 
@@ -41,19 +39,13 @@ public class ActivitySignUp extends Activity implements OnClickListener {
 	protected void onStart() {
 		super.onStart();
 
-		menu.setOnClickListener(this);
 		bt_continue.setOnClickListener(this);
 	}
 
 	@Override
 	public void onClick(View v) {
 		switch (v.getId()) {
-		case R.id.menu:
-			startActivity(new Intent(ActivitySignUp.this,
-					ActivitySettings.class));
-			overridePendingTransition(android.R.anim.slide_in_left,
-					android.R.anim.fade_out);
-			break;
+		
 		case R.id.bt_continue:
 
 			startActivity(new Intent(ActivitySignUp.this, NearbyActivity.class));

@@ -6,6 +6,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.Toast;
@@ -59,6 +61,15 @@ public class NearbyActivity extends Activity implements OnClickListener {
 		setHeader();
 		loadMap();
 		loadListView();
+		list_Business.setOnItemClickListener(new OnItemClickListener() {
+
+			@Override
+			public void onItemClick(AdapterView<?> parent, View view,
+					int position, long id) {
+				startActivity(new Intent(NearbyActivity.this, ActivityChat.class));
+				overridePendingTransition(0, 0);
+			}
+		});
 	}
 
 	@Override
