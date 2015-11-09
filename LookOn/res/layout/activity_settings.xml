@@ -15,6 +15,8 @@
         android:id="@+id/txt_about"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/ic_info"
+        android:drawablePadding="@dimen/view_size_5"
         android:padding="@dimen/view_size_5"
         android:text="@string/about"
         android:textSize="@dimen/txt_size_20" />
@@ -29,6 +31,8 @@
         android:id="@+id/txt_profile"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/ic_info"
+        android:drawablePadding="@dimen/view_size_5"
         android:padding="@dimen/view_size_5"
         android:text="@string/profile"
         android:textSize="@dimen/txt_size_20" />
@@ -43,6 +47,8 @@
         android:id="@+id/txt_notification_sound"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/ic_music"
+        android:drawablePadding="@dimen/view_size_5"
         android:padding="@dimen/view_size_5"
         android:text="@string/notification_sound"
         android:textSize="@dimen/txt_size_20" />
@@ -57,6 +63,8 @@
         android:id="@+id/txt_claim_your_business"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/ic_marker"
+        android:drawablePadding="@dimen/view_size_5"
         android:padding="@dimen/view_size_5"
         android:text="@string/claim_your_business"
         android:textSize="@dimen/txt_size_20" />
@@ -71,6 +79,8 @@
         android:id="@+id/txt_send_feedback"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/ic_paper_plane"
+        android:drawablePadding="@dimen/view_size_5"
         android:padding="@dimen/view_size_5"
         android:text="@string/send_feedback"
         android:textSize="@dimen/txt_size_20" />
@@ -85,6 +95,8 @@
         android:id="@+id/txt_rate_us"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/ic_star"
+        android:drawablePadding="@dimen/view_size_5"
         android:padding="@dimen/view_size_5"
         android:text="@string/rate_us"
         android:textSize="@dimen/txt_size_20" />
@@ -99,6 +111,8 @@
         android:id="@+id/txt_faq"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/ic_qsf"
+        android:drawablePadding="@dimen/view_size_5"
         android:padding="@dimen/view_size_5"
         android:text="@string/faq"
         android:textSize="@dimen/txt_size_20" />

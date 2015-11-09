@@ -1,15 +1,71 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:sbview="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bg_business" >
+    android:background="@drawable/bg_business"
+    android:padding="@dimen/view_size_5" >
 
-    <TextView
-        android:layout_width="fill_parent"
+    <ImageView
+        android:id="@+id/img_name_edit"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:gravity="center"
-        android:text="Design Top Rated Screen"
-        android:textSize="20dp" />
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="@dimen/view_size_20"
+        android:padding="@dimen/view_size_5"
+        android:src="@drawable/ic_pencil" />
+
+    <com.sbw.lookon.custom.SbTextView
+        android:id="@+id/txt_myprofile_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/view_size_20"
+        android:layout_toLeftOf="@+id/img_name_edit"
+        android:padding="@dimen/view_size_5"
+        android:text="Prashun Kumar Choudhury"
+        android:textSize="@dimen/txt_size_20"
+        sbview:typeface="Roboto-Bold.ttf" />
+
+    <View
+        android:id="@+id/bar"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/txt_myprofile_name"
+        android:layout_marginTop="@dimen/view_size_10"
+        android:background="@android:color/darker_gray" />
+
+    <ImageView
+        android:id="@+id/img_info_edit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/bar"
+        android:layout_marginTop="@dimen/view_size_20"
+        android:padding="@dimen/view_size_5"
+        android:src="@drawable/ic_pencil" />
+
+    <com.sbw.lookon.custom.SbTextView
+        android:id="@+id/txt_myprofile_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/bar"
+        android:layout_marginTop="@dimen/view_size_10"
+        android:layout_toLeftOf="@+id/img_info_edit"
+        android:padding="@dimen/view_size_5"
+        android:text="Info"
+        android:textSize="@dimen/txt_size_20"
+        sbview:typeface="Roboto-Bold.ttf" />
+
+    <com.sbw.lookon.custom.SbTextView
+        android:id="@+id/txt_myprofile_phone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txt_myprofile_info"
+        android:layout_toLeftOf="@+id/img_info_edit"
+        android:padding="@dimen/view_size_5"
+        android:text="Phone: 6017-8554175"
+        android:textSize="@dimen/txt_size_15"
+        sbview:typeface="Roboto-Bold.ttf" />
 
 </RelativeLayout>

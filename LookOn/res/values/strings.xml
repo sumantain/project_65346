@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">LookOn</string>
+    <string name="app_name">FLEXICHAT</string>
     <string name="hello_world">Hello world!</string>
     <string name="dev_map_key">AIzaSyAvVm3sSkRD8a4I28rcIRSoVDTuk_WoN_c</string>
     <string name="action_settings">Settings</string>

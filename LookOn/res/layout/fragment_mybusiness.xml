@@ -1,15 +1,113 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:sbview="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@drawable/bg_business" >
+    android:layout_height="match_parent" >
 
-    <TextView
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:gravity="center"
-        android:text="Design Top Rated Screen"
-        android:textSize="20dp" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_business"
+        android:orientation="vertical"
+        android:padding="@dimen/view_size_5" >
 
-</RelativeLayout>
+        <com.sbw.lookon.custom.SbTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/view_size_10"
+            android:paddingLeft="@dimen/view_size_5"
+            android:text="Business Name"
+            android:textSize="@dimen/txt_size_12"
+            sbview:typeface="Roboto-Bold.ttf" />
+
+        <com.sbw.lookon.custom.SbTextView
+            android:id="@+id/txt_mybusiness_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/view_size_5"
+            android:text="OZONEAD SERVICES"
+            android:textSize="@dimen/txt_size_16"
+            sbview:typeface="Roboto-Bold.ttf" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="@dimen/view_size_10"
+            android:background="@android:color/darker_gray" />
+
+        <com.sbw.lookon.custom.SbTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/view_size_10"
+            android:paddingLeft="@dimen/view_size_5"
+            android:text="Contact Number"
+            android:textSize="@dimen/txt_size_12"
+            sbview:typeface="Roboto-Bold.ttf" />
+
+        <com.sbw.lookon.custom.SbTextView
+            android:id="@+id/txt_mybusiness_number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/view_size_5"
+            android:text="+6017-8554175"
+            android:textSize="@dimen/txt_size_16"
+            sbview:typeface="Roboto-Bold.ttf" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="@dimen/view_size_10"
+            android:background="@android:color/darker_gray" />
+
+        <com.sbw.lookon.custom.SbTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/view_size_10"
+            android:paddingLeft="@dimen/view_size_5"
+            android:text="Address"
+            android:textSize="@dimen/txt_size_12"
+            sbview:typeface="Roboto-Bold.ttf" />
+
+        <com.sbw.lookon.custom.SbTextView
+            android:id="@+id/txt_mybusiness_address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/view_size_5"
+            android:text="713,Jalan TBK 2/14,Taman Bukit Kepayang 2, 70200, seremban, Negeri Sembilan Darul Khusus, Malaysia."
+            android:textSize="@dimen/txt_size_16"
+            sbview:typeface="Roboto-Bold.ttf" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="@dimen/view_size_10"
+            android:background="@android:color/darker_gray" />
+
+        <com.sbw.lookon.custom.SbTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/view_size_10"
+            android:paddingLeft="@dimen/view_size_5"
+            android:text="Status"
+            android:textSize="@dimen/txt_size_12"
+            sbview:typeface="Roboto-Bold.ttf" />
+
+        <com.sbw.lookon.custom.SbTextView
+            android:id="@+id/txt_mybusiness_status"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/view_size_5"
+            android:text="Claimed, Verified"
+            android:textSize="@dimen/txt_size_16"
+            sbview:typeface="Roboto-Bold.ttf" />
+
+        <fragment
+            android:id="@+id/map"
+            android:name="com.google.android.gms.maps.MapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_margin="@dimen/view_size_15" />
+    </LinearLayout>
+
+</ScrollView>

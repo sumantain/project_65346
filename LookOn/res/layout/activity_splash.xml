@@ -24,7 +24,7 @@
         android:padding="@dimen/view_size_5"
         android:layout_marginBottom="@dimen/view_size_5"
         android:layout_alignParentBottom="true"
-        android:text="Copyright &#169; by Sumanta Banerjee"
+        android:text="Copyright &#169; by OZONEAD"
         android:textSize="@dimen/txt_size_10"
         sbview:typeface="Roboto-Bold.ttf"/>
     
