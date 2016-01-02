@@ -11,7 +11,7 @@
         android:gravity="center"
         android:layout_centerInParent="true"
         android:padding="@dimen/view_size_5"
-        android:text="LookOn"
+        android:text="FLEXICHAT"
         android:textSize="@dimen/txt_size_35"
         sbview:typeface="Roboto-Bold.ttf"/>
     

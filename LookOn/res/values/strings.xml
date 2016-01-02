@@ -3,7 +3,7 @@
 
     <string name="app_name">FLEXICHAT</string>
     <string name="hello_world">Hello world!</string>
-    <string name="dev_map_key">AIzaSyAvVm3sSkRD8a4I28rcIRSoVDTuk_WoN_c</string>
+    <string name="dev_map_key">AIzaSyBNmh91RRn0hPNFNajb9HFJOpRIMw54fgM</string>
     <string name="action_settings">Settings</string>
     <string name="cancel">Cancel</string>
 
@@ -31,11 +31,38 @@
     <string name="send_feedback">Send Feedback</string>
     <string name="rate_us">Rate Us</string>
     <string name="faq">FAQ</string>
+
     
-    
-    
-    
+    <string name="msg_connect_network">Please connect network</string>
+    <string name="something">Something went wrong! Please try again.</string>
     <!--  -->
     <string name="demo_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis eget lobortis leo. Phasellus tincidunt sem id dui feugiat elementum.</string>
+
+    <!-- API parameter veriables -->
+    <string name="api_access">access</string>
+    <string name="api_ApiKey">ApiKey</string>
+    <string name="api_DeviceId">DeviceId</string>
+    <string name="api_RequestCode">RequestCode</string>
+    <string name="api_Message">Message</string>
+    <string name="api_ResponseData">ResponseData</string>
+    
+    <string name="api_FName">FName</string>
+    <string name="api_LName">LName</string>
+    <string name="api_PhoneNo">PhoneNo</string>
+    <string name="api_Latitude">Latitude</string>
+    <string name="api_Longitude">Longitude</string>
+    <string name="api_UserId">UserId</string>
+    <string name="api_Name">Name</string>
+    <string name="api_verified">verified</string>
+    
+    <string name="api_vender">vender</string>
+    <string name="api_venderInfo">venderInfo</string>
+    <string name="api_Addres">Addres</string>
+    <string name="api_PlaceId">PlaceId</string>
+    <string name="api_type">type</string>
+    
+    
+    
+    
 
 </resources>
