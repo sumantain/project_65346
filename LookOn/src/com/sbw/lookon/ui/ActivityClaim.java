@@ -2,6 +2,7 @@ package com.sbw.lookon.ui;
 
 import com.sbw.lookon.R;
 import com.sbw.lookon.adapter.AdapterNearByBusiness;
+import com.sbw.lookon.adapter.ClaimAdapter;
 import com.sbw.lookon.custom.SbTextView;
 
 import android.app.Activity;
@@ -21,7 +22,7 @@ public class ActivityClaim extends Activity implements OnClickListener{
 	private ImageView back;
 	private SbTextView header_text;
 	private ListView list_Business;
-	private AdapterNearByBusiness mAdapter;
+	private ClaimAdapter mAdapter;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -77,7 +78,7 @@ public class ActivityClaim extends Activity implements OnClickListener{
 	 * 
 	 */
 	private void populateListItem() {
-		mAdapter = new AdapterNearByBusiness(context);
+		mAdapter = new ClaimAdapter(context);
 		list_Business.setAdapter(mAdapter);
 	}
 

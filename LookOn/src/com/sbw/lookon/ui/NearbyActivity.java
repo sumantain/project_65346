@@ -1,8 +1,12 @@
 package com.sbw.lookon.ui;
 
+import java.util.ArrayList;
+
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.os.AsyncTask;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -19,7 +23,10 @@ import com.google.android.gms.maps.model.CameraPosition;
 import com.google.android.gms.maps.model.LatLng;
 import com.sbw.lookon.R;
 import com.sbw.lookon.adapter.AdapterNearByBusiness;
+import com.sbw.lookon.asynctask.GetPlaceAsync;
+import com.sbw.lookon.asynctask.GetPlaceAsync.WebCallBackGetPlace;
 import com.sbw.lookon.custom.SbTextView;
+import com.sbw.lookon.dataitem.AccountVendorItem;
 import com.sbw.lookon.utility.GPSTracker;
 
 public class NearbyActivity extends Activity implements OnClickListener {
@@ -60,6 +67,7 @@ public class NearbyActivity extends Activity implements OnClickListener {
 		list_Business = (ListView) findViewById(R.id.list_business);
 		setHeader();
 		loadMap();
+		apiCall();
 		loadListView();
 		list_Business.setOnItemClickListener(new OnItemClickListener() {
 
@@ -99,8 +107,37 @@ public class NearbyActivity extends Activity implements OnClickListener {
 
 	private void loadListView() {
 
-		mAdapter = new AdapterNearByBusiness(context);
+		mAdapter = new AdapterNearByBusiness(context,new ArrayList<AccountVendorItem>());
 		list_Business.setAdapter(mAdapter);
+	}
+	
+	
+	private void apiCall(){
+		
+		GetPlaceAsync mAsync=new GetPlaceAsync(context, "", String.valueOf(latitude), String.valueOf(longitude));
+		
+		if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB)
+			mAsync.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
+		else
+			mAsync.execute();
+		
+		
+		mAsync.setmCallBack(new  WebCallBackGetPlace() {
+			
+			@Override
+			public void onSuccess(ArrayList<AccountVendorItem> mVendorItem) {
+				if (mVendorItem!=null && mVendorItem.size()>0) {
+					mAdapter.reload(mVendorItem);
+				}
+				
+			}
+			
+			@Override
+			public void onError() {
+				Toast.makeText(context, getString(R.string.something), Toast.LENGTH_SHORT).show();
+			}
+		});
+		
 	}
 
 	/**
